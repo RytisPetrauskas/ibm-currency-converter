@@ -6,18 +6,17 @@ import {Currency} from './Currency'
 })
 
 export class CurrencyService {
- 
+
   constructor(private http:HttpClient) { }
 
-  public getCurrencyList() {      
-    let link = "https://imb-rytis-petrauskas.herokuapp.com/currencies";
+  public getCurrencyList() {
+    let link = "https://ibm-rytis-petrauskas.herokuapp.com/currencies";
     return this.http.get<any>(link);
   }
 
   public getCurrencyRates(firstAbv: string, secondAbv: string){
-    let link = "https://imb-rytis-petrauskas.herokuapp.com/currencyRate/" + firstAbv + "/" + secondAbv;
+    let link = "https://ibm-rytis-petrauskas.herokuapp.com/currencyRate/" + firstAbv + "/" + secondAbv;
     return this.http.get<any>(link);
   }
 
 }
-
