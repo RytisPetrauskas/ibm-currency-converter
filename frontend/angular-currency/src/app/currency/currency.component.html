@@ -1,0 +1,45 @@
+<div class="full-height text-center text-white" style=" padding-top: 15rem;">
+  <div>
+    <img class="left" src="assets/ibm-logo-bl.png" style="width:200px;height:110px; padding-top: 1rem; padding-left: 1rem; float: left;">
+   
+    <h1 class="center" style = "font-size: 70px; padding-bottom: 5rem; color: black;">
+      Currency converter
+    </h1>
+  </div>
+  
+  <div style="background-color: darkgray; width: 80%; height: 400px; border-radius: 25px; position: absolute; left: 10%;">
+    <div class = "row" style="padding-top: 7rem;">
+      <div style="padding-left: 5rem;">
+        <h3> Amout </h3>
+        <input (change)="onChange()" #input class="text-center w3-input" type="text" [value]="1" style="width: 200px; height: 100px; font-size: 45px; border-radius: 25px;">
+      </div>
+      
+      <div style="padding-left: 2rem;"> 
+        <h3> From </h3>
+        <select #firstSelect (change)="onChange()" style="width: 400px; height: 100px ; font-size: 45px; border-radius: 25px;" >
+          <option *ngFor="let x of currencies" [selected]="x.abv === startingCurrency1" >{{x.abv + "(" + x.name + ")"}}</option>
+        </select>
+      </div>
+
+      <div style="padding-left: 1rem; padding-top: 2.5rem;">
+        <button  type="image" (click)=btnClick() class = "button-style"><img src="assets/arrow.png" style="width: 70px; height: 70px;"></button>
+      </div>
+
+      <div style="padding-left: 1rem;">
+        <h3> To </h3>
+        <select #secondSelect (change)="onChange()" style="width: 400px; height: 100px; font-size: 45px; border-radius: 25px; text-align: right;">
+          <option *ngFor="let x of currencies" [selected]="x.abv === startingCurrency2">{{x.abv + "(" + x.name + ")"}}</option>
+      </select>
+      </div>
+
+      <div style="padding-left: 2rem; padding-top: 2.5rem;">
+        
+        <input #label class="text-center" [value]=converted type="text" style="width: 200px; height: 100px; font-size: 45px; border-radius: 25px;">
+      
+      </div>
+
+      
+    </div>
+    
+  </div>
+</div>

@@ -1,0 +1,50 @@
+.center {
+    position: absolute;
+    left: 10%;
+    top: 16%;
+}
+
+.left {
+    position: absolute;
+    left: 0%;
+    top: 0%;
+}
+
+.right {
+    position: absolute;
+    left: 20%;
+    top: 0%;
+}
+
+.line-left{
+    border-bottom: 7px solid darkgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+  }
+
+.full-height {
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    background-color: gray;
+  }
+
+.button-style{
+    width: 100px;
+    height: 100px;
+    color: white;
+    background-color: transparent;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+#wgtmsr{
+    width:150px;   
+   }
+   
+   #wgtmsr option{
+    width:100px;   
+   }
